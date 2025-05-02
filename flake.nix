@@ -26,7 +26,7 @@
         ./hosts/nixos/configuration.nix
         ./modules/desktop/brave-browser.nix
         ./modules/desktop/themes.nix
-        ./modules/system/garbage-collection.nix
+        ./modules/nix-optimization/garbage-collection.nix
 
         # Make home-manager as a module of nixos
         # so that home-manager configuration will be deployed
