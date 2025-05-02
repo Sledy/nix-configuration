@@ -24,7 +24,7 @@
         # Import the previous configuration.nix we used,
         # so the old configuration file still takes effect
         ./hosts/nixos/configuration.nix
-        ./modules/desktop/brave-browser.nix
+        ./modules/desktop/applications.nix
         ./modules/desktop/themes.nix
         ./modules/nix-optimization/garbage-collection.nix
 
