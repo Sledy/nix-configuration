@@ -76,6 +76,25 @@
     userName = "Adam Śledziewski";
     userEmail = "sledziewski.adam@proton.me";
   };
+  
+  gtk = {
+    enable = true;
+  	
+    iconTheme = {
+      name = "Whitesur-icon-theme";
+      package = pkgs.whitesur-icon-theme;
+    };
+
+    theme = {
+      name = "whitesur-gtk-theme";
+      package = pkgs.whitesur-gtk-theme;
+    };
+
+    cursorTheme = {
+      name = "Numix-Cursor";
+      package = pkgs.numix-cursor-theme;
+    };
+  };
 
 
   # This value determines the home Manager release that your
