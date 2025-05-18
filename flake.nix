@@ -25,7 +25,7 @@
         # so the old configuration file still takes effect
         ./hosts/nixos/configuration.nix
         ./modules/desktop/applications.nix
-        # ./modules/desktop/themes.nix
+        ./modules/desktop/themes.nix
         ./modules/nix-optimization/garbage-collection.nix
         ./modules/environmental-variables/envs.nix
 

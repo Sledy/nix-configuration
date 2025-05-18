@@ -77,11 +77,6 @@
     userEmail = "sledziewski.adam@proton.me";
   };
   
-  gtk = {
-    enable = true;
-  };
-
-
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage
   # when a new home Manager release introduces backwards
@@ -94,5 +89,4 @@
 
   # Let home Manager install and manage itself.
   programs.home-manager.enable = true;
-  home-manager.backupFileExtension = "hm-backup";
 }
