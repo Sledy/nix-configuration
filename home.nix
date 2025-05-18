@@ -79,16 +79,6 @@
   
   gtk = {
     enable = true;
-  	
-    iconTheme = {
-      name = "Whitesur-icon-theme";
-      package = pkgs.whitesur-icon-theme;
-    };
-
-    theme = {
-      name = "whitesur-gtk-theme";
-      package = pkgs.whitesur-gtk-theme;
-    };
   };
 
 
