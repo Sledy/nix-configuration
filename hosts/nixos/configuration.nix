@@ -12,6 +12,13 @@
 
 
   # ----------- NVIDIA graphics ------------------
+  
+  # Hack for suspending the system session
+   systemd.services."systemd-suspend" = {
+    serviceConfig = {
+      Environment=''"SYSTEMD_SLEEP_FREEZE_USER_SESSIONS=false"'';
+    };
+  };
 
   # Enable OpenGL
   hardware.graphics = {
