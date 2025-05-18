@@ -87,21 +87,6 @@
   # changes in each release.
   home.stateVersion = "24.11";
   
-  gtk = {
-    enable = true;
-
-    iconTheme = {
-      name = "Whitesur-icon-theme";
-      package = pkgs.whitesur-icon-theme;
-    };
-
-    theme = {
-      name = "whitesur-gtk-theme";
-      package = pkgs.whitesur-gtk-theme;
-    };
-  };
-
-
   # Let home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
