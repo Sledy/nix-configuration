@@ -27,10 +27,12 @@
         ./modules/desktop/applications.nix
         ./modules/desktop/themes.nix
         ./modules/nix-optimization/garbage-collection.nix
+        ./modules/environmental-variables/envs.nix
 
         # Make home-manager as a module of nixos
         # so that home-manager configuration will be deployed
         # automatically when executing `nixos-rebuild switch`
+
 
         home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
