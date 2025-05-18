@@ -89,11 +89,6 @@
       name = "whitesur-gtk-theme";
       package = pkgs.whitesur-gtk-theme;
     };
-
-    cursorTheme = {
-      name = "Numix-Cursor";
-      package = pkgs.numix-cursor-theme;
-    };
   };
 
 
