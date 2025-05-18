@@ -2,6 +2,6 @@
 
 {
   environment.systemPackages = [
-    pkgs.catppuccin-kde
+    pkgs.whitesur-gtk-theme
   ];
 }
