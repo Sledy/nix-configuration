@@ -34,6 +34,8 @@
         ./modules/desktop/firefox-nightly.nix
         ./modules/nix-optimization/garbage-collection.nix
         ./modules/environmental-variables/envs.nix
+        
+        ./modules/work/programming.nix
 
         # Make home-manager as a module of nixos
         # so that home-manager configuration will be deployed

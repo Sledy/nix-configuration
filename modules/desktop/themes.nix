@@ -10,5 +10,6 @@
     pkgs.dialog
     pkgs.jdupes
     pkgs.util-linux
+    pkgs.ubuntu_font_family
   ];
 }

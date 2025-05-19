@@ -159,11 +159,28 @@
     packages = with pkgs; [
       gnome-tweaks  # Handy for customizing GNOME
     ];
+    shell = pkgs.zsh;
   };
 
 
   # Install firefox.
   programs.firefox.enable = true;
+  
+    programs = {
+      zsh = {
+        enable = true;
+        ohMyZsh = {
+          enable = true;
+          theme = "robbyrussell";
+          plugins = [
+            "sudo"
+            "terraform"
+            "systemadmin"
+            "vi-mode"
+          ];
+        };
+      };
+    };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -173,8 +190,8 @@
   environment.systemPackages = with pkgs; [
      vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
      git
-     gnome-terminal
      gnome-control-center
+     htop
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
