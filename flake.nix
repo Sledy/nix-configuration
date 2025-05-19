@@ -4,7 +4,8 @@
   inputs = {
     # NixOS official package source, using the nixos-24.11 branch here
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
-
+    firefox.url = "github:nix-community/flake-firefox-nightly";
+    firefox.inputs.nixpkgs.follows = "nixpkgs";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-24.11";
@@ -26,6 +27,11 @@
         ./hosts/nixos/configuration.nix
         ./modules/desktop/applications.nix
         ./modules/desktop/themes.nix
+        
+        ({ ... }: { _module.args.inputs = inputs; })
+        ./modules/desktop/firefox-nightly.nix
+        
+        ./modules/desktop/firefox-nightly.nix
         ./modules/nix-optimization/garbage-collection.nix
         ./modules/environmental-variables/envs.nix
 
