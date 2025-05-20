@@ -71,8 +71,16 @@
   # ----------- ENDING SECTION NVIDIA graphics ------------------
 
   # -----------  Bootloader ------------------
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.systemd-boot.enable = false; # Disable systemd
+  boot.loader = {
+    efi.canTouchEfiVariables = true;
+    grub = {
+      enable = true;
+      devices = [ "nodev" ];
+      efiSupport = true;
+      useOSProber = true;
+    };
+  };
 
   # Experimental features for flakes usage
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
