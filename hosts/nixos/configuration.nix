@@ -89,6 +89,7 @@
       useOSProber = true;
     };
   };
+  boot.supportedFilesystems = [ "ntfs" ];
 
   # Experimental features for flakes usage
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
