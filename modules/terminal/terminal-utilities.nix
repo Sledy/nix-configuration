@@ -6,6 +6,7 @@
     pkgs.rclone
     pkgs.ffmpeg-full
     pkgs.wl-clipboard
+    pkgs.glxinfo
   ];
 }
 

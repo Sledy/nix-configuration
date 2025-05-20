@@ -23,7 +23,13 @@
   # Enable OpenGL
   hardware.graphics = {
     enable = true;
-    extraPackages = with pkgs; [nvidia-vaapi-driver];
+    enable32Bit = true;
+    extraPackages = with pkgs; [
+      nvidia-vaapi-driver
+      libva
+      libvdpau
+      libva-vdpau-driver
+    ];
   };
 
   # Load nvidia driver for Xorg and Wayland
@@ -56,6 +62,8 @@
     # Enable the Nvidia settings menu,
 	# accessible via `nvidia-settings`.
     nvidiaSettings = true;
+    
+    nvidiaPersistenced = true;
 
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
     package = config.boot.kernelPackages.nvidiaPackages.beta;
