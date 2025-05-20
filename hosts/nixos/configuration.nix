@@ -61,7 +61,8 @@
     package = config.boot.kernelPackages.nvidiaPackages.beta;
     
     prime = {
-    	offload.enable = true;
+    	offload.enable = false;
+    	sync.enable = true;
     	intelBusId = "PCI:0:2:0";
     	nvidiaBusId = "PCI:1:0:0";
     };
@@ -69,7 +70,7 @@
 
   # ----------- ENDING SECTION NVIDIA graphics ------------------
 
-  # Bootloader.
+  # -----------  Bootloader ------------------
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
