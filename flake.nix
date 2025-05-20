@@ -36,6 +36,7 @@
         ./modules/environmental-variables/envs.nix
         
         ./modules/work/programming.nix
+        ./modules/terminal/terminal-utilities.nix
 
         # Make home-manager as a module of nixos
         # so that home-manager configuration will be deployed

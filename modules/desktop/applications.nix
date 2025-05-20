@@ -10,5 +10,6 @@
     pkgs.jetbrains-toolbox
     pkgs.veracrypt
     pkgs.dbeaver-bin
+    pkgs.vlc
   ];
 }
