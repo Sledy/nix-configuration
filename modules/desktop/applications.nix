@@ -12,5 +12,6 @@
     pkgs.dbeaver-bin
     pkgs.mpv
     pkgs.smplayer
+    pkgs.gthumb
   ];
 }
