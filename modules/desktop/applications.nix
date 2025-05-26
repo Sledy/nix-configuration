@@ -13,5 +13,6 @@
     pkgs.mpv
     pkgs.smplayer
     pkgs.gthumb
+    pkgs.obs-studio
   ];
 }
