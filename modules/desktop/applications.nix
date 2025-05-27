@@ -14,5 +14,6 @@
     pkgs.smplayer
     pkgs.gthumb
     pkgs.obs-studio
+    pkgs.logseq
   ];
 }
