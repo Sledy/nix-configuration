@@ -5,7 +5,7 @@
     jdk
     maven
     gradle
-    nodejs_23
+    nodejs_24
     docker
   ];
   

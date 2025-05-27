@@ -136,7 +136,7 @@
   services.xserver.desktopManager.gnome.enable = true;
 
   # Optional: Enable GNOME accessibility features
-  services.gnome.core-utilities.enable = true;
+  services.gnome.core-apps.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -151,7 +151,7 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
