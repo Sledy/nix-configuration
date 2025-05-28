@@ -15,6 +15,5 @@
     pkgs.gthumb
     pkgs.obs-studio
     pkgs.logseq
-    pkgs.gparted
   ];
 }

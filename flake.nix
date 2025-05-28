@@ -28,19 +28,31 @@
         ./modules/desktop/applications.nix
         ./modules/desktop/themes.nix
         
+        # Apps
+        ./modules/desktop/applications.nix
+        
+        
         ({ ... }: { _module.args.inputs = inputs; })
         ./modules/desktop/firefox-nightly.nix
         
-        ./modules/desktop/firefox-nightly.nix
+        # NixOs Optimizations
         ./modules/nix-optimization/garbage-collection.nix
+        
+        # System envs
         ./modules/environmental-variables/envs.nix
         
+        # Work
         ./modules/work/programming.nix
         ./modules/work/gnupg.nix
+        
+        # Terminal
         ./modules/terminal/terminal-utilities.nix
 
 	# External devices
         ./modules/desktop/printer.nix
+        
+        # Partitioning
+        ./modules/desktop/partitioning-tools.nix
 
         # Make home-manager as a module of nixos
         # so that home-manager configuration will be deployed
