@@ -36,7 +36,11 @@
         ./modules/environmental-variables/envs.nix
         
         ./modules/work/programming.nix
+        ./modules/work/gnupg.nix
         ./modules/terminal/terminal-utilities.nix
+
+	# External devices
+        ./modules/desktop/printer.nix
 
         # Make home-manager as a module of nixos
         # so that home-manager configuration will be deployed
