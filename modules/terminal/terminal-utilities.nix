@@ -1,12 +1,27 @@
 { config, pkgs, ... }:
 
 {
-
   environment.systemPackages = with pkgs; [
-    pkgs.rclone
-    pkgs.ffmpeg-full
-    pkgs.wl-clipboard
-    pkgs.glxinfo
+    rclone
+    ffmpeg-full
+    wl-clipboard
+    glxinfo
   ];
+
+  programs = {
+    zsh = {
+      enable = true;
+      ohMyZsh = {
+        enable = true;
+        theme = "robbyrussell";
+        plugins = [
+          "sudo"
+          "terraform"
+          "systemadmin"
+          "vi-mode"
+        ];
+      };
+    };
+  };
 }
 

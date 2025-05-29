@@ -2,70 +2,74 @@
   description = "NixOS flake";
 
   inputs = {
-    # NixOS official package source, using the nixos-25.05 branch here
+    # NixOS official package source (nixos-25.05)
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+
+    # Firefox Nightly from nix-community
     firefox.url = "github:nix-community/flake-firefox-nightly";
     firefox.inputs.nixpkgs.follows = "nixpkgs";
 
+    # Home Manager
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
-      # The `follows` keyword in inputs is used for inheritance.
-      # Here, `inputs.nixpkgs` of home-manager is kept consistent with
-      # the `inputs.nixpkgs` of the current flake,
-      # to avoid problems caused by different versions of nixpkgs.
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs: {
-    # Please replace my-nixos with your hostname
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
+
       modules = [
-        # Import the previous configuration.nix we used,
-        # so the old configuration file still takes effect
+        # Main host configuration
         ./hosts/nixos/configuration.nix
-        ./modules/desktop/applications.nix
+
+        # Themes
         ./modules/desktop/themes.nix
-        
-        # Apps
+
+        # Applications
         ./modules/desktop/applications.nix
-        
-        
+
+        # Infrastructure
+        ./hosts/nixos/Infrastructure_modules/bootloader.nix
+        ./hosts/nixos/Infrastructure_modules/desktop_environment.nix
+        ./hosts/nixos/Infrastructure_modules/nvidia_drivers.nix
+        ./hosts/nixos/Infrastructure_modules/sound_drivers.nix
+
+        # Provide flake inputs to all modules
         ({ ... }: { _module.args.inputs = inputs; })
+
+        # Firefox Nightly module
         ./modules/desktop/firefox-nightly.nix
-        
-        # NixOs Optimizations
+
+        # NixOS optimizations
         ./modules/nix-optimization/garbage-collection.nix
-        
-        # System envs
+
+        # Environment variables
         ./modules/environmental-variables/envs.nix
-        
-        # Work
+
+        # Work-related tools
         ./modules/work/programming.nix
         ./modules/work/gnupg.nix
-        
-        # Terminal
+
+        # Terminal utilities
         ./modules/terminal/terminal-utilities.nix
 
-	# External devices
+        # External devices
         ./modules/desktop/printer.nix
-        
-        # Partitioning
+
+        # Partitioning tools
         ./modules/desktop/partitioning-tools.nix
 
-        # Make home-manager as a module of nixos
-        # so that home-manager configuration will be deployed
-        # automatically when executing `nixos-rebuild switch`
-
+        # Home Manager integration
         home-manager.nixosModules.home-manager {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.backupFileExtension = "backup"; 
-            home-manager.users.adam = import ./home.nix;
-          }
-
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.backupFileExtension = "backup";
+          home-manager.users.adam = import ./home.nix;
+        }
       ];
     };
   };
 }
+
