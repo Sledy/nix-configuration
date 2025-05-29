@@ -8,6 +8,7 @@
       devices = [ "nodev" ];
       efiSupport = true;
       useOSProber = true;
+      default = "saved";
     };
   };
   boot.supportedFilesystems = [ "ntfs" ];
