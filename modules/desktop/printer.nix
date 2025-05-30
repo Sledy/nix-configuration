@@ -1,13 +1,12 @@
 { pkgs, inputs, config, ... }:
 
-{ 
-# Enable CUPS to print documents.
+{
+  # Printing services
   services.printing = {
-     enable = true;
-     drivers = with pkgs; [
-     hplip
-     ];
+    enable = true;
+    drivers = with pkgs; [
+      hplip
+    ];
   };
-  services.avahi.enable = true;
 }
 
