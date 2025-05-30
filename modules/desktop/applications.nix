@@ -4,83 +4,84 @@
   services.flatpak.enable = true;
 
   environment.systemPackages = with pkgs; [
+
+    ### Editors
+    vim                       # Terminal text editor
+    logseq            	      # Knowledge management and note-taking app
+    libreoffice-qt6-fresh # Documents editor, MS office substitute
+
+    ### File Utilities
+    file              # Determines file type
+    which             # Shows full path of shell commands
+    tree              # Displays directory tree
+    gthumb            # Image viewer and organizer
+    gnused            # GNU implementation of `sed`
+    gnutar            # GNU implementation of `tar`
+    gawk              # GNU implementation of `awk`
+    zstd              # Fast compression algorithm
+    gnupg             # Encryption and signing tool
+    
+    ### Password managers
     keepassxc
-    brave
-    jetbrains-toolbox
-    veracrypt
-    dbeaver-bin
-    mpv
-    smplayer
-    gthumb
-    obs-studio
-    logseq
-    vim  # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    git
-    gnome-control-center
-    htop
-    pomodoro-gtk
-    
-    
-    neofetch
 
-    # archives
-    zip
-    unzip
-    p7zip
+    ### Development Tools
+    jetbrains-toolbox # Installs and manages JetBrains IDEs
+    git               # Distributed version control system
+    jq                # Command-line JSON processor
+    yq-go             # YAML processor based on Go
+    dbeaver-bin       # Database management tool
 
-    # utils
-    ripgrep # recursively searches directories for a regex pattern
-    jq # A lightweight and flexible command-line JSON processor
-    yq-go # yaml processor https://github.com/mikefarah/yq
-    eza # A modern replacement for ‘ls’
-    fzf # A command-line fuzzy finder
+    ### Multimedia Tools
+    mpv               # Media player
+    smplayer          # Qt front-end for MPV
+    obs-studio        # Screen recorder and streaming tool
+    veracrypt         # Disk encryption utility
 
-    # networking tools
-    mtr # A network diagnostic tool
-    iperf3
-    dnsutils  # `dig` + `nslookup`
-    ldns # replacement of `dig`, it provide the command `drill`
-    aria2 # A lightweight multi-protocol & multi-source command-line download utility
-    socat # replacement of openbsd-netcat
-    nmap # A utility for network discovery and security auditing
-    ipcalc  # it is a calculator for the IPv4/v6 addresses
+    ### Network Tools
+    mtr               # Network diagnostics combining ping and traceroute
+    iperf3            # Network bandwidth measurement tool
+    dnsutils          # Contains `dig` and `nslookup`
+    ldns              # Includes `drill`, a DNS lookup tool
+    aria2             # Lightweight command-line download manager
+    socat             # Network tool for data relay
+    nmap              # Network scanning and auditing tool
+    ipcalc            # IP subnet calculator
+    iftop             # Network bandwidth monitoring tool
 
-    # misc
-    cowsay
-    file
-    which
-    tree
-    gnused
-    gnutar
-    gawk
-    zstd
-    gnupg
+    ### System Monitoring & Debugging
+    htop              # Interactive process viewer
+    btop              # Resource monitor with a modern UI
+    iotop             # I/O usage monitoring tool
+    strace            # Traces system calls and signals
+    ltrace            # Traces library calls
+    lsof              # Lists open files
+    sysstat           # System performance monitoring tools
+    lm_sensors        # Shows hardware sensor data
+    ethtool           # Configures Ethernet devices
 
-    # nix related
-    #
-    # it provides the command `nom` works just like `nix`
-    # with more details log output
-    nix-output-monitor
+    ### Archive & Compression Tools
+    zip               # Zip file compressor
+    unzip             # Extracts zip files
+    p7zip             # 7z archive tool
 
-    # productivity
-    glow # markdown previewer in terminal
+    ### Command-line UX Enhancements
+    ripgrep           # Fast recursive search tool (like grep)
+    eza               # Modern replacement for `ls`
+    fzf               # Fuzzy file finder
+    neofetch          # System info in terminal
+    glow              # Terminal markdown viewer
 
-    btop  # replacement of htop/nmon
-    iotop # io monitoring
-    iftop # network monitoring
+    ### Nix & System Management
+    nix-output-monitor # Enhances output of Nix commands
+    pciutils          # Includes `lspci` to inspect PCI devices
+    usbutils          # Includes `lsusb` to inspect USB devices
+    gnome-control-center # GNOME system settings UI
 
-    # system call monitoring
-    strace # system call monitoring
-    ltrace # library call monitoring
-    lsof # list open files
+    ### Productivity Apps
+    pomodoro-gtk      # Pomodoro timer
 
-    # system tools
-    sysstat
-    lm_sensors # for `sensors` command
-    ethtool
-    pciutils # lspci
-    usbutils # lsusb
-    
+    ### Fun & Miscellaneous
+    cowsay            # Displays messages as a talking cow
   ];
 }
 
