@@ -52,6 +52,9 @@
         ./modules/work/programming.nix
         ./modules/work/gnupg.nix
 
+        # Scout24
+	./modules/work/scout24.nix
+
         # Terminal utilities
         ./modules/terminal/terminal-utilities.nix
 
