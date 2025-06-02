@@ -28,6 +28,10 @@
     enable = true;
     userName = "Adam Śledziewski";
     userEmail = "sledziewski.adam@proton.me";
+    signing = {
+      key = "14BD25CDFCC9D9C62BB6DB81BE0FEF77B908998C";
+      signByDefault = true;
+    };
   };
 
   # This value determines the Home Manager release that your
