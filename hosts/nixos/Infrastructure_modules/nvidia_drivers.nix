@@ -2,13 +2,15 @@
 
 {
   # ----------- NVIDIA graphics ------------------
-  
+
+
   # Hack for suspending the system session
-   systemd.services."systemd-suspend" = {
+  systemd.services."systemd-suspend" = {
     serviceConfig = {
       Environment=''"SYSTEMD_SLEEP_FREEZE_USER_SESSIONS=false"'';
     };
   };
+ 
 
   # Enable OpenGL
   hardware.graphics = {
@@ -56,7 +58,7 @@
     nvidiaPersistenced = true;
 
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
-    package = config.boot.kernelPackages.nvidiaPackages.beta;
+    package = config.boot.kernelPackages.nvidiaPackages.production;
     
     prime = {
     	offload.enable = false;
