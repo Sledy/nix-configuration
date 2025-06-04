@@ -7,8 +7,10 @@
     gradle
     nodejs_24
     docker
-    chromedriver
   ];
+  
+  
+
   
   virtualisation.docker.rootless = {
   	enable = true;

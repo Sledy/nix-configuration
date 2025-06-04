@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "chrome-pkgs": {
+      "locked": {
+        "lastModified": 1729874453,
+        "narHash": "sha256-nMWVoacDDqEqvw07x55CZAHfyTk9A6Ou/Jgzv3EGUOo=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "feacc947d3b21dc6f5ab02dc97b020d72d239046",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "feacc947d3b21dc6f5ab02dc97b020d72d239046",
+        "type": "github"
+      }
+    },
     "firefox": {
       "inputs": {
         "flake-compat": "flake-compat",
@@ -128,6 +144,7 @@
     },
     "root": {
       "inputs": {
+        "chrome-pkgs": "chrome-pkgs",
         "firefox": "firefox",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs"

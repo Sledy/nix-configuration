@@ -8,6 +8,8 @@
     # Firefox Nightly from nix-community
     firefox.url = "github:nix-community/flake-firefox-nightly";
     firefox.inputs.nixpkgs.follows = "nixpkgs";
+    
+    chrome-pkgs.url = "github:nixos/nixpkgs/feacc947d3b21dc6f5ab02dc97b020d72d239046"; # Used for chrome 130 version, installed in Scout24 nix file
 
     # Home Manager
     home-manager = {

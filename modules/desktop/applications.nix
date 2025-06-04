@@ -2,7 +2,8 @@
 
 {
   services.flatpak.enable = true;
-
+  programs.nix-ld.enable = true; # Required for running the generic linux binaries
+  
   environment.systemPackages = with pkgs; [
 
     ### Editors
