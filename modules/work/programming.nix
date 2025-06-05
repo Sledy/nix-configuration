@@ -7,6 +7,7 @@
     gradle
     nodejs_24
     docker
+    sbt
   ];
   
   
