@@ -8,7 +8,8 @@
     nodejs_24
     docker
     sbt
-    python313Full
+    python313Full # python 3.13
+    python311Packages.pip # python pip for version 3.13
   ];
   
   
