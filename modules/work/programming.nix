@@ -8,6 +8,7 @@
     nodejs_24
     docker
     sbt
+    python313Full
   ];
   
   
