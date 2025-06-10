@@ -78,6 +78,9 @@
     usbutils          # Includes `lsusb` to inspect USB devices
     gnome-control-center # GNOME system settings UI
 
+    ### Backup solution
+    timeshift
+
     ### Productivity Apps
     pomodoro-gtk      # Pomodoro timer
 
