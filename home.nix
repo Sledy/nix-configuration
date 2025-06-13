@@ -38,6 +38,12 @@
         "/home/adam/Work/KraftCode/Scout24/Repositories/is24-sso-iterable-sync"
       ];
     };
+    includes = [
+      {
+      	path = "~/Work/KraftCode/Scout24/Git/gitconfig";
+      	condition = "gitdir:~/Work/KraftCode/Scout24/Repositories/";
+      }
+    ];
     
   };
 
