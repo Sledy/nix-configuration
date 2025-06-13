@@ -32,6 +32,10 @@
       key = "14BD25CDFCC9D9C62BB6DB81BE0FEF77B908998C";
       signByDefault = true;
     };
+    maintenance = {
+      enable = true;
+    };
+    
   };
 
   # This value determines the Home Manager release that your
