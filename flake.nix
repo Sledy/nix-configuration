@@ -37,6 +37,7 @@
         ./hosts/nixos/Infrastructure_modules/desktop_environment.nix
         ./hosts/nixos/Infrastructure_modules/nvidia_drivers.nix
         ./hosts/nixos/Infrastructure_modules/sound_drivers.nix
+        ./hosts/nixos/Infrastructure_modules/suspend_fix.nix
 
         # Provide flake inputs to all modules
         ({ ... }: { _module.args.inputs = inputs; })
