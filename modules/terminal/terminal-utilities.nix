@@ -6,6 +6,7 @@
     ffmpeg-full
     wl-clipboard
     glxinfo
+    tldr
   ];
 
   programs = {
