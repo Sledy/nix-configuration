@@ -83,6 +83,9 @@
 
     ### Productivity Apps
     pomodoro-gtk      # Pomodoro timer
+    
+    ### Comunnication
+    slack
 
     ### Fun & Miscellaneous
     cowsay            # Displays messages as a talking cow
