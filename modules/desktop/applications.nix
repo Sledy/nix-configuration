@@ -31,6 +31,7 @@
     jq                # Command-line JSON processor
     yq-go             # YAML processor based on Go
     dbeaver-bin       # Database management tool
+    postman           # API Development Environment
 
     ### Multimedia Tools
     mpv               # Media player
