@@ -83,6 +83,7 @@
 
     ### Backup solution
     timeshift
+    deja-dup
 
     ### Productivity Apps
     pomodoro-gtk      # Pomodoro timer
