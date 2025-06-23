@@ -3,7 +3,7 @@
 {
   services.flatpak.enable = true;
   programs.nix-ld.enable = true; # Required for running the generic linux binaries
-  
+
   environment.systemPackages = with pkgs; [
 
     ### Editors
@@ -21,7 +21,7 @@
     gawk              # GNU implementation of `awk`
     zstd              # Fast compression algorithm
     gnupg             # Encryption and signing tool
-    
+
     ### Password managers
     keepassxc
 
@@ -78,17 +78,17 @@
     usbutils          # Includes `lsusb` to inspect USB devices
     gnome-control-center # GNOME system settings UI
 
+    ### Web browsers
+    firefox
+
     ### Backup solution
     timeshift
 
     ### Productivity Apps
     pomodoro-gtk      # Pomodoro timer
-    
-    ### Comunnication
-    slack
 
-    ### Fun & Miscellaneous
-    cowsay            # Displays messages as a talking cow
+    ### Communication
+    slack
   ];
 }
 
