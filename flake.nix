@@ -39,11 +39,6 @@
         ./hosts/nixos/Infrastructure_modules/sound_drivers.nix
         ./hosts/nixos/Infrastructure_modules/suspend_fix.nix
 
-        # Provide flake inputs to all modules
-        ({ ... }: { _module.args.inputs = inputs; })
-
-        # Firefox Nightly module
-#        ./modules/desktop/firefox-nightly.nix
 
         # NixOS optimizations
         ./modules/nix-optimization/garbage-collection.nix
