@@ -13,7 +13,7 @@
   ];
 
     virtualisation.docker = {
-      enable = false;
+      enable = true;
       enableNvidia = true;
 
       rootless = {
