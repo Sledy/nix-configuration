@@ -10,7 +10,10 @@
       Environment=''"SYSTEMD_SLEEP_FREEZE_USER_SESSIONS=false"'';
     };
   };
- 
+
+
+  # Enable nvidia for docker containers
+  hardware.nvidia-container-toolkit.enable = true;
 
   # Enable OpenGL
   hardware.graphics = {
@@ -54,12 +57,12 @@
     # Enable the Nvidia settings menu,
 	# accessible via `nvidia-settings`.
     nvidiaSettings = true;
-    
+
     nvidiaPersistenced = true;
 
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
     package = config.boot.kernelPackages.nvidiaPackages.production;
-    
+
     prime = {
     	offload.enable = false;
     	sync.enable = true;
@@ -68,5 +71,5 @@
     };
   };
 
-  # ----------- ENDING SECTION NVIDIA graphics ------------------	
+  # ----------- ENDING SECTION NVIDIA graphics ------------------
 }
