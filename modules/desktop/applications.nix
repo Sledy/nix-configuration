@@ -35,7 +35,7 @@
 
     ### Multimedia Tools
     mpv               # Media player
-    smplayer          # Qt front-end for MPV
+    celluloid         # GTK player for mpv
     obs-studio        # Screen recorder and streaming tool
     veracrypt         # Disk encryption utility
 
