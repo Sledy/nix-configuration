@@ -91,6 +91,7 @@
 
     ### Communication
     slack
+    signal-desktop-bin
   ];
 }
 
