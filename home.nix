@@ -35,7 +35,7 @@
     maintenance = {
       enable = true;
       repositories = [
-        "/home/adam/Work/KraftCode/Scout24/Repositories/is24-sso-iterable-sync",
+        "/home/adam/Work/KraftCode/Scout24/Repositories/is24-sso-iterable-sync"
         "/home/adam/Work/KraftCode/Scout24/Repositories/is24-supra"
       ];
     };
