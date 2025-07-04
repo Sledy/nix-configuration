@@ -92,6 +92,7 @@
     ### Communication
     slack
     signal-desktop-bin
+    teams-for-linux
   ];
 }
 
